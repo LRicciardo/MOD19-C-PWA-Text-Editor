@@ -1,5 +1,10 @@
 {
   "name": "JATE",
+  "scriptcomments": {
+    "dev": "(Development) webpack-dev-server updates the browser on changes",
+    "build": "(Production) webpack --mode production will build the client in production mode",
+    "start": "(Development) webpack --watch - like nodemon --watch will recompile whenever the files in the webpackage change"
+  },
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",

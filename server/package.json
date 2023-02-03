@@ -3,8 +3,13 @@
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
+    "scriptcomments": {
+        "server:dev": "(Development) nodemon server.js --ignore client will monitor any changes in the server directory and ignore any changes in the client directory. If a change occurs the server will restart automatically.",
+        "server": "(Production) node server.js start the server for production."
+    },
     "scripts": {
-        "server": "nodemon server.js --ignore client"
+        "server:dev": "nodemon server.js --ignore client",
+        "server": "node server.js"
     },
     "keywords": [],
     "author": "",
