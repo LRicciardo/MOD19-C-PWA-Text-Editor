@@ -23,14 +23,19 @@ module.exports = () => {
   return {
     // sets the mode to development unless explicitly overridden by the package.json script
     mode: "development",
+    watchOptions: {
+      ignored: /node_modules/,
+    },
     // entry points using Object Syntax. Each entry point can have attributes. Here are 2 entry points: main and install
     entry: {
+      // regiter Workbox service worker 
       main: "./src/js/index.js",
+      // contains the service workers to install the application locally
       install: "./src/js/install.js"
     },
     // what to name the bundle file and where to write put it (ONLY ONE)
     output: {
-      filename: "jate-bundle.js",
+      filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist")
     },
     plugins: [
@@ -40,8 +45,8 @@ module.exports = () => {
       }),
       new MiniCssExtractPlugin(),
       new InjectManifest({
-        swSrc: "./src/sw.js",
-        swDest: "src-service-worker.js"
+        swSrc: "./src-sw.js",
+        swDest: "src-sw.js"
       }),
       new WebpackPwaManifest({
         fingerprints: false,

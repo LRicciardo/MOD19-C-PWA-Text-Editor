@@ -27,8 +27,8 @@ const loadSpinner = () => {
 // Create a new instance of the Editor class
 const editor = new Editor();
 
+// if no editor is defined, call the loadSpinner function
 if (typeof editor === 'undefined') {
-  // if no editor is defined, call the loadSpinner function
   loadSpinner();
 }
 

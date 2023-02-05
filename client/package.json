@@ -1,9 +1,10 @@
 {
   "name": "jate",
+  "description": "client package.json for the jate pwa application",
   "scriptcomments": {
-    "dev": "(Development) webpack-dev-server updates the browser on changes",
-    "build": "(Production) webpack --mode production will build the client in production mode",
-    "start": "(Development) webpack --watch - like nodemon --watch will recompile whenever the files in the webpackage change"
+    "dev": "(Development) updates the browser on changes",
+    "build": "(Production) will build the client in production mode",
+    "start": "(Development) will build the webpack and will recompile whenever the files in the webpackage change (like nodemon)"
   },
   "scripts": {
     "dev": "webpack-dev-server",

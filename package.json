@@ -1,13 +1,13 @@
 {
   "name": "jate",
   "version": "1.0.0",
-  "description": "",
+  "description": "main package.json for the jate pwa application",
   "main": "server.js",
   "scriptcomments": {
     "packagejson": "Package.json files hold the information needed to run the application. There can be more than one to apply to different parts of the application (i.e client/server/main).",
     "scripts": "Scripts are sequence of commands to run the current application. There are more than one for different states of the application (i.e. production/development).",
     "start:dev": "(Development) This script runs two scripts at the same time (concurrently). First, the script changes to the server directory and runs the server script from that local package.json. Second, the script changes to the client directory and runs the dev script from that local package.json.",
-    "start": "(Production) This script runs two scripts sequentially. First, the script changes to the client directory and runs the client build script from that local package.json. Then, chnges to the server directory and runs the server script from that local package.json.",
+    "start": "(Production) This script runs two scripts sequentially. First, the script changes to the client directory and runs the client build script from that local package.json. Then, changes to the server directory and runs the server script from that local package.json.",
     "server": "(Development/server-side only)This script changes to the server directory and runs the server script from that local package.json",
     "build": "(Production/client-side only) The script changes to the client directory and runs the client build script from that local package.json.",
     "install": "(Install - run once) This script runs two scripts sequentially. First, the script changes to the server directory and installs all dependencies in the local package.json. Then, changes to the client directory and installs all dependencies in the local package.json.",
