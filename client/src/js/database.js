@@ -24,26 +24,29 @@ const initdb = async () =>
 // TODO: Add logic to a method that accepts some content and adds it to the database
 // Exports putDb function to PUT to the database
 export const putDb = async (content) => {
-  console.log('putDb - PUT to the database');
-  // Create a connection to the DB and version
-  const jateDb = await openDB("jate", 1);
-  // create a new transaction and specify the DB and data privileges.
-  const trans = jateDb.transaction("jate", "readwrite");
-  // Open the desired object store.
-  const store = trans.objectStore("jate");
-  // Use the .put() method on the store and pass in the content. (pass the key, value)
-  const request = store.put({ id: 1, value: content });
-  // Get confirmation of the request
-  const result = await request;
-  
-  console.log("data saved successfully", result)
-
-  
+  try {
+    console.log('putDb - PUT to the database');
+    // Create a connection to the DB and version
+    const jateDb = await openDB("jate", 1);
+    // create a new transaction and specify the DB and data privileges.
+    const trans = jateDb.transaction("jate", "readwrite");
+    // Open the desired object store.
+    const store = trans.objectStore("jate");
+    // Use the .put() method on the store and pass in the content. (pass the key, value)
+    const request = store.put({ id: 1, value: content });
+    // Get confirmation of the request
+    const result = await request;
+    
+    console.log("data saved successfully", result)
+} catch (err) {
+    console.error(err, "** putDb did not work **")
+} 
 };
 
 // TODO: Add logic for a method that gets all the content from the database
 // Method that gets content from the IndexedDB database using the idb module
 export const getDb = async () => {
+  try {
   console.log('getDb - GET from the database');
   // Create a connection to the DB and version
   const jateDb = await openDB("jate", 1);
@@ -52,7 +55,8 @@ export const getDb = async () => {
   // Open the desired object store.
   const store = trans.objectStore("jate");
   // Use the .get() method on the store and pass in the content. (pass the key)
-  const request = store.get(1);
+  const request = store.getAll();
+  // const request = store.get(1);
   // Get confirmation of the request
   const result = await request;
   // ternary-- if there was a result, success (and result) is returned
@@ -62,6 +66,9 @@ export const getDb = async () => {
     : console.log('🚀 - data not found in the database');
   // Chained operator: if there was a result and there was a value in the result, return the result.value
   return result?.value;
+} catch (err) {
+  console.error(err, "** getDb did not work **")
+} 
 };
 
 // call the initialize database function.

@@ -24,13 +24,16 @@ warmStrategyCache({
   strategy: pageCache,
 });
 
+// Register navigate page cache
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
 // Regiter route for caching images
 // The cache first strategy is often the best choice for images because it saves bandwidth and improves performance.
-registerRoute(({ request }) => ["style", "script", "worker"].includes(request.destination), new StaleWhilRevalidate({
-  cachename: "asset-cache",
-  plugins: [ new CacheableResponsePlugin({ statuses: [0,200]})],
-}) 
+registerRoute(({ request }) => 
+    ["style", "script", "worker"].includes(request.destination), 
+    new StaleWhilRevalidate({
+      cachename: "asset-cache",
+      plugins: [ new CacheableResponsePlugin({ statuses: [0,200]})],
+  }) 
 );

@@ -26,12 +26,16 @@ module.exports = () => {
     watchOptions: {
       ignored: /node_modules/,
     },
-    // entry points using Object Syntax. Each entry point can have attributes. Here are 2 entry points: main and install
+    // entry points using Object Syntax. Each entry point can have attributes.
     entry: {
-      // regiter Workbox service worker 
+      // main entry point
       main: "./src/js/index.js",
-      // contains the service workers to install the application locally
-      install: "./src/js/install.js"
+      // entry point to install
+      install: "./src/js/install.js",
+      // entry point for editor
+      editor: "./src/js/editor.js",
+      // entry point for header
+      header: "./src/js/header.js"
     },
     // what to name the bundle file and where to write put it (ONLY ONE)
     output: {
@@ -53,7 +57,7 @@ module.exports = () => {
         inject: true,
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
-        description: 'Text Editor',
+        description: ' A PWA Text Editor',
         // background_color: '#21b649',
         background_color: '#218EB6',
         theme_color: '#21b649',

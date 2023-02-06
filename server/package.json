@@ -8,7 +8,7 @@
         "server": "(Production) start the server for production."
     },
     "scripts": {
-        "server:dev": "nodemon server.js --ignore client",
+        "dev": "nodemon server.js --ignore client",
         "server": "node server.js"
     },
     "keywords": [],

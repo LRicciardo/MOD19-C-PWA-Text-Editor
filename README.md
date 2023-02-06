@@ -1,4 +1,4 @@
-# MOD19-C-PWA-Text-Editor
+# <center><font color="blue">**MOD19-C-PWA-Text-Editor**</font></center>
 PWA Text Editor JATE Just Another Text Editor
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -60,12 +60,9 @@ THEN I should have proper build scripts for a webpack application
 
 ## Visual Documentation
 
-The following video shows the application being used from Insomnia app:
+The following is a Link to Deployed website from **Heroku**:
 
-DEMO video 1: The GET functions for Users and Thoughts collections.
-
-[![A DEMO video 1: The GET functions for Users and Thought collections.](./assets/18-nosql-homework-demo-01.gif)](https://drive.google.com/file/d/1LQAs72pn20lpKHoluigqOqtGrxclS1Ak/view?usp=share_link)
-
+[![ScreenShot](./assets/Screenshot%202023-02-05%20150622.png "Link to website")](https://mod19-c-pwa-text-editor.herokuapp.com/)
 ***
 
 ## Installation
