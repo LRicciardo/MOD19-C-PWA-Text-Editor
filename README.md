@@ -62,45 +62,39 @@ THEN I should have proper build scripts for a webpack application
 
 The following is a Link to Deployed website from **Heroku**:
 
-[![ScreenShot](./assets/Screenshot%202023-02-05%20150622.png "Link to website")](https://mod19-c-pwa-text-editor.herokuapp.com/)
+[![Deployed to Heroku](./assets/MainScreenShot-small.png "Link to website")](https://mod19-c-pwa-text-editor.herokuapp.com/)
 ***
 
 ## Installation
 
-Initialize npm to produce the package.json file.
-Type npm run install
- 
+This is deployed using Heroku for the IndexedDb. The link is above.
+To install using GitHub. Initialize npm to produce the package.json file.
+
+Type npm run install. 
 In the command line, type npm start.
 
 ## Usage
 - JavaScript with Node.js - base coding language
-- express - to create the routers/endpoints
 
-- Client-side configuration
---  "@babel/core": "^7.15.0",
-    "@babel/plugin-transform-runtime": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/runtime": "^7.15.3",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.3.2",
-    "http-server": "^0.11.1",
-    "mini-css-extract-plugin": "^2.7.2",
-    "style-loader": "^3.2.1",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.0.0",
-    "webpack-pwa-manifest": "^4.3.0",
-    "workbox-webpack-plugin": "^6.2.4"
-  },
-  "dependencies": {
-    "code-mirror-themes": "^1.0.0",
-    "idb": "^6.1.2"
+- Server-side dependencies
+  - Production - Express
+  
+  - Developmental - Nodemon
 
+- Client-side dependencies
+  - Developmental
+    -  Babel,
+    -  CSS-loader,
+    -  Webpack,
+    -  Style loader
+  
+  - Production
+    - Code Mirror Themes,
+    - IndexedDb
 
 ## Credits
 
-I would like to thank my tutoring for helping me. (Though seeding gave me lots of trouble and I only seeded Users successfully. I want to look into npm mongo-seeding more.)
+I would like to thank my TA's and instructor and the, maybe, accidental, additional help in the source code.
 
 ## License
 
@@ -116,7 +110,7 @@ This application is using the The MIT License License. Click on the badge  [![Li
 
 This application follows the [Contributor Covenant](https://www.contributor-covenant.org/).
 
-If you would like to contribute it, you can create an issue on GitHub repository at https://github.com/LRicciardo/MOD18-C-Social-Network-API. 
+If you would like to contribute it, you can create an issue on GitHub repository at https://github.com/LRicciardo/MOD19-C-PWA-Text-Editor. 
 
 ## Tests
 

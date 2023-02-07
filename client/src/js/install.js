@@ -9,7 +9,7 @@ const butInstall = document.getElementById('buttonInstall');
 //   (screen object is just for the physical screen dimensions)
 //  when the window is displayed, (before the installation of the app),
 //      we want the button to show 
-window.addEventListener('beforeinstallprompt', (event) => {
+window.addEventListener("beforeinstallprompt", (event) => {
   // sets the state of the deferredPrompt
   window.deferredPrompt = event;
   butInstall.classList.toggle("hidden", false);
@@ -17,7 +17,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
 
 // TODO: Implement a click event handler on the `butInstall` element
 //  event listener on the install button
-butInstall.addEventListener('click', async () => {
+butInstall.addEventListener("click", async () => {
   // holds the value of the deferredPrompt
   const promptEvent = window.deferredPrompt;
   // checks the state of the deferredPrompt
@@ -33,7 +33,7 @@ butInstall.addEventListener('click', async () => {
 });
 
 // TODO: Add an handler for the `appinstalled` event
-window.addEventListener('appinstalled', (event) => {
+window.addEventListener("appinstalled", (event) => {
   // changes the state of the deferredPrompt
   window.deferredPrompt = null;
 });

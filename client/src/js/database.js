@@ -55,8 +55,8 @@ export const getDb = async () => {
   // Open the desired object store.
   const store = trans.objectStore("jate");
   // Use the .get() method on the store and pass in the content. (pass the key)
-  const request = store.getAll();
-  // const request = store.get(1);
+  // const request = store.getAll();
+  const request = store.get(1);
   // Get confirmation of the request
   const result = await request;
   // ternary-- if there was a result, success (and result) is returned
