@@ -63,6 +63,10 @@ THEN I should have proper build scripts for a webpack application
 The following is a Link to Deployed website from **Heroku**:
 
 [![Deployed to Heroku](./assets/MainScreenShot-small.png "Link to website")](https://mod19-c-pwa-text-editor.herokuapp.com/)
+
+[Video of functionality 1 - Install Button](https://drive.google.com/file/d/1T-oVWEW8zx7k023O0xuVONNTKGGBLQki/view?usp=share_link)
+
+[Video of functionality 2 - Manifest, Service Workers, IndexedDb](https://drive.google.com/file/d/1A_uZaiLDQ8i2XINAk4GBwYG8iJil06zw/view?usp=share_link)
 ***
 
 ## Installation
